@@ -3,7 +3,7 @@ output "azs" {
 }
 
 output "vpc_id" {
-  value = aws_vpc.main.id
+  value = aws_vpc.expense.id
 }
 
 output "public_subnet_ids" {
@@ -20,5 +20,5 @@ output "database_subnet_ids" {
 
 
 output "igw_id" {
-  value = aws_internet_gateway.gw.id
+  value = aws_internet_gateway.expense_igw.id
 }
