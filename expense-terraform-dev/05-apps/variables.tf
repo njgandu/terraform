@@ -14,3 +14,7 @@ variable "common_tags" {
     terraform = "true"
   }
 }
+
+variable "zone_name" {
+  default = "gandu.tech"
+}

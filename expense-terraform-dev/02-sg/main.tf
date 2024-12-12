@@ -61,6 +61,17 @@ module "bastion" {
     common_tags = var.common_tags
 }
 
+module "ansible" {
+    source = "../../terraform-aws-sg"
+    project_name = var.project_name
+    sg_name = "ansible"
+    sg_description = "security_groups for ansible"
+    vpc_id = data.aws_ssm_parameter.vpc_id.value
+    common_tags = var.common_tags
+}
+
+
+
 resource "aws_security_group_rule" "db_backend" {
   type              = "ingress"
   from_port         = 3306
