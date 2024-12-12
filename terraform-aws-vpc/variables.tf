@@ -78,6 +78,11 @@ variable "database_subnet_tags"{
     default = {}
 }
 
+variable "database_subnet_group_tags" {
+    type = map
+    default = {}
+}
+
 ### nat ###
 variable "ngw_tags"{
     type = map 
